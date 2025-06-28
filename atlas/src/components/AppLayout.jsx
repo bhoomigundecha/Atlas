@@ -1,15 +1,14 @@
-import { Home } from "../pages/Home";
-import Footers from "../components/UI/Footers";  // ✅ correct
-import Headers from "../components/UI/Headers";  // ✅ correct
+import Footers from "../components/UI/Footers";
+import Headers from "../components/UI/Headers";
+import { Outlet } from "react-router-dom"; // ✅ important
 import '../App.css';
-import { About } from "../pages/About";
 
 export const AppLayout = () => {
-    return(
-    <>
-    <Headers />
-    <Home />
-    <Footers />
-    </>
+    return (
+        <>
+            <Headers />
+            <Outlet />  {/* ✅ This is where route-specific pages like Contact, About will show */}
+            <Footers />
+        </>
     );
 };
