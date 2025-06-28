@@ -15,6 +15,7 @@ html {
 
 body {
   background-color: black;
+  overflow-x: hidden;
 }
 
 h1,
@@ -77,8 +78,9 @@ button {
 /* Layout  */
 
 .container {
-  max-width: 140rem;
-  margin: auto;
+  padding: 0 2rem;
+  max-width: 90rem;
+  margin: 0 auto;
 }
 
 .grid {
@@ -101,27 +103,34 @@ button {
 
 header {
   height: 10rem;
-  box-shadow: rgba(255, 255, 255, 0.3) 0px 10px 10px -10px;
-  background-color: #202020;
-  width: 100%;
+
+  box-shadow: rgba(64, 153, 201, 0.2) 0px 8px 12px -5px;
+  background-color: #496971;
+  width: 147rem;
 
   & .container {
     height: 10rem;
   }
 }
 
+.Logo{
+  margin-left : -13rem;
+}
+
 .navbar-grid {
-  grid-template-columns: 0.5fr 1fr;
+  grid-template-columns: 1fr 1fr;
   align-items: center;
   height: 10rem;
-  padding: 0 3.2rem;
+  padding: 4 3.2rem;
+  width: 100%;
 }
 
 nav ul {
+  margin-right : -14rem;
   display: flex;
   justify-content: flex-end;
   /* background-color: yellow; */
-  gap: 3.2rem;
+  gap: 4rem;
   color: #fff;
 
   & li a {
@@ -171,9 +180,19 @@ nav ul {
 /* hero section  */
 
 .hero-section .container {
+  max-width: 90rem;
   padding: 3.2rem;
-  margin: 9rem auto;
+  margin: 2rem auto;
   gap: 6.4rem;
+}
+
+.hero-content {
+  margin-top: 13rem;
+  margin-left: 15rem;
+
+  flex: 1;
+  max-width: 500px;
+  color: white;
 }
 
 .paragraph {
@@ -181,6 +200,7 @@ nav ul {
 }
 
 .heading-xl {
+  margin-left : 0rem;
   font-family: inherit;
   font-size: clamp(5.2rem, 6vw, 4.241rem);
   font-weight: 700;
@@ -189,22 +209,30 @@ nav ul {
 }
 
 .hero-image {
+  margin-top: 15rem;
+  margin-right : 14rem;
   display: flex;
-  justify-content: center;
+  justify-content: center;  
   align-items: center;
+  padding: 2rem;
 }
 
-.container .banner-image {
-  width: 100%;
+
+
+.banner-image {
+  width: 600px;  
+  max-width: 100%;
+  height: auto;
 }
 
-@media screen and (max-width: 990px) {
+
+@media screen and (max-width: 150px) {
   .hero-content {
     order: 1;
   }
 
   .container .banner-image {
-    width: 80%;
+    width: 30%;
     order: 0;
   }
 }
@@ -212,12 +240,15 @@ nav ul {
 /* About Section  */
 
 .section-about {
-  margin: 0 auto 9rem auto;
+  margin: 18rem auto 9rem auto;
 }
 
 .gradient-cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  margin-left : -20rem;
+  margin-right: -20rem;
+  margin-top: 5rem;
   gap: 3.2rem;
 }
 

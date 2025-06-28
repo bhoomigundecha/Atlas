@@ -1,3 +1,13 @@
+import { FaLongArrowAltRight } from "react-icons/fa";
+import './../App.css';
+
+import { About } from "./About";
+import { HeroSection } from "../components/UI/HeroSection";
 export const Home = () => {
-    return <h1> Home </h1>
+    return (
+        <>
+        <HeroSection />
+        <About />
+        </>
+    );
 }
