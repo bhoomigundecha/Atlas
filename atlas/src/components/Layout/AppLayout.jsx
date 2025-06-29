@@ -1,7 +1,6 @@
-import Footers from "../components/UI/Footers";
-import Headers from "../components/UI/Headers";
+import Footers from "../UI/Footers";
+import Headers from "../UI/Headers";
 import { Outlet } from "react-router-dom"; // ✅ important
-import '../App.css';
 
 export const AppLayout = () => {
     return (

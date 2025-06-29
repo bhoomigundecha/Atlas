@@ -348,7 +348,7 @@ nav ul {
   align-items: center;
 
   & .icon {
-    color: #3a4ed5;
+    color: #ffffff;
     font-size: 3.6rem;
 
     & .icon:nth-child(2) {
@@ -386,7 +386,7 @@ ul {
   padding: 0px;
 }
 .footer-section {
-  background: #151414;
+  background: #496971;
   position: relative;
 }
 
@@ -418,6 +418,22 @@ ul {
 /* --------------- 
 country Card 
 ------------------ */
+
+/* Country Section */
+.country-section {
+  padding: 2rem;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #000000 0%, #fefeff 100%);
+}
+
+.country-section .grid-four-cols {
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.country-section .grid-four-cols li {
+  list-style: none;
+}
 
 .country-card {
   margin-top: 3.2rem;
@@ -534,9 +550,6 @@ country Card
   color: rgba(255, 255, 255, 0.5);
 }
 
-/* ------------------ 
-contact us page 
---------------- */
 
 .section-contact {
   margin: 9.6rem auto;

@@ -1,11 +1,13 @@
-import './App.css';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import { AppLayout } from './components/AppLayout';
-import {About} from './pages/About';
-import {Home} from './pages/Home';
-import {Country} from './pages/Country';
-import {Contact} from './pages/Contact';
-import { ErrorPage } from './pages/ErrorPage';
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { AppLayout } from "./components/Layout/AppLayout";
+
+import "./App.css";
+
+import { Home } from "./pages/Home";
+import { About } from "./pages/About";
+import { Country } from "./pages/Country";
+import { ErrorPage } from "./pages/ErrorPage";
+import { CountryDetails } from "./components/Layout/CountryDetails";
 
 const router = createBrowserRouter([
   {
@@ -15,7 +17,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Home />
+        element: <Home />,
       },
       {
         path: "about",
@@ -26,18 +28,15 @@ const router = createBrowserRouter([
         element: <Country />,
       },
       {
-        path: "contact",
-        element: <Contact />,
-      }
-
-    ]
-  }
-])
-
-
+        path: "country/:id",
+        element: <CountryDetails />,
+      },
+    ],
+  },
+]);
 
 const App = () => {
-  return <RouterProvider router={router}> </RouterProvider>
-}
+  return <RouterProvider router={router}> </RouterProvider>;
+};
 
 export default App;
